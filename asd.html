@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var circle = document.createElement('div');
+circle.style.borderRadius = '50%';
+circle.style.width = '100px';
+circle.style.height = '100px';
+circle.style.left = '40%';
+circle.style.top = '30%';
+circle.style.backgroundColor = 'red';
+circle.style.position = 'absolute';
+
+document.body.appendChild(circle);
+
+var i = 0;
+var interval = setInterval(function() {
+  circle.style.backgroundColor = 'hsl(' + i + ', 100%, 50%)';
+  circle.style.transform = 'rotate(' + i + 'deg)';
+  i += 10;
+  if (i > 360) {
+    clearInterval(interval);
+  }
+}, 20);
+
+var i = 0;
+var interval = setInterval(function() {
+  circle.style.backgroundColor = 'hsl(' + i + ', 100%, 50%)';
+  circle.style.transform = 'rotate(' + i + 'deg)';
+  i += 10;
+  if (i > 360) {
+    clearInterval(interval);
+  }
+}, 20);
+
+';
+
+var whiteCircle = document.createElement('div');
+whiteCircle.style.borderRadius = '50%';
+whiteCircle.style.width = '50px';
+whiteCircle.style.height = '50px';
+whiteCircle.style.left = '43%';
+whiteCircle.style.top = '36%';
+whiteCircle.style.backgroundColor = 'white';
+whiteCircle.style.position = 'absolute';
+
+document.body.appendChild(whiteCircle);
+
+var i = 0;
+var interval = setInterval(function() {
+  whiteCircle.style.backgroundColor = 'hsl(' + i + ', 100%, 50%)';
+  whiteCircle.style.transform = 'rotate(' + i + 'deg)';
+  i += 10;
+  if (i > 360) {
+    clearInterval(interval);
+  }
+}, 20);
+});
+        </script>
+    </head>
