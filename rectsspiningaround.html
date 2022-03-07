@@ -1,0 +1,190 @@
+
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var rect = document.createElement('div');
+rect.style.backgroundColor = '#00f';
+rect.style.width = '130px';
+rect.style.height = '130px';
+rect.style.position = 'absolute';
+rect.style.left = '60%';
+rect.style.top = '50%';
+document.body.appendChild(rect);
+var rect2 = document.createElement('div');
+rect2.style.backgroundColor = 'blue';
+rect2.style.width = '130px';
+rect2.style.height = '130px';
+rect2.style.position = 'absolute';
+rect2.style.left = '37%';
+rect2.style.top = '50%';
+document.body.appendChild(rect2);
+
+
+
+document.body.appendChild(rect);
+var rect3 = document.createElement('div');
+rect3.style.backgroundColor = 'blue';
+rect3.style.width = '130px';
+rect3.style.height = '130px';
+rect3.style.position = 'absolute';
+rect3.style.left = '37%';
+rect3.style.top = '50%';
+rect3.style.transform = 'rotate(45deg)';
+
+
+
+
+document.body.appendChild(rect);
+var rect4 = document.createElement('div');
+rect4.style.backgroundColor = 'yellow';
+rect4.style.width = '130px';
+rect4.style.height = '130px';
+rect4.style.position = 'absolute';
+rect4.style.left = '60%';
+rect4.style.top = '50%';
+rect4.style.transform = 'rotate(45deg)';
+
+
+
+
+document.body.appendChild(rect3);
+document.body.appendChild(rect4);
+
+
+
+
+
+
+
+
+
+
+
+var blue= false;
+var interval = setInterval(function() {
+  if (yellow) {
+    rect4.style.backgroundColor = 'blue';
+  } else {
+    rect4.style.backgroundColor = 'yellow';
+  }
+  blue= !blue;
+}, 50);
+
+
+
+
+var blue= false;
+var interval = setInterval(function() {
+  if (yellow) {
+    rect3.style.backgroundColor = 'yellow';
+  } else {
+    rect3.style.backgroundColor = 'blue';
+  }
+  blue= !blue;
+}, 50);
+
+
+
+
+
+var yellow= false;
+var interval = setInterval(function() {
+  if (yellow) {
+    rect.style.backgroundColor = 'yellow';
+  } else {
+    rect.style.backgroundColor = 'blue';
+  }
+  yellow= !yellow;
+}, 50);
+
+
+
+
+
+
+var blue= false;
+var interval = setInterval(function() {
+  if (yellow) {
+    rect2.style.backgroundColor = 'yellow';
+  } else {
+    rect2.style.backgroundColor = 'blue';
+  }
+  blue= !blue;
+}, 50);
+
+
+
+
+var spin = document.createElement('div');
+spin.style.position = 'absolute';
+spin.style.left = '62%';
+spin.style.top = '53%';
+spin.style.width = '100px';
+spin.style.height = '100px';
+
+spin.style.backgroundColor = '#00f';
+
+spin.style.backgroundImage = 'linear-gradient(yellow 50%,blue 50%)';
+
+
+
+
+spin.style.transform = 'rotate(0deg)';
+spin.style.transition = 'transform 1s linear';
+document.body.appendChild(spin);
+
+function spinAround() {
+  spin.style.transform = 'rotate(' + (parseInt(spin.style.transform.match(/\d+/)) + 10) + 'deg)';
+}
+
+setInterval(spinAround, 12);
+
+var spin2 = document.createElement('div');
+spin2.style.position = 'absolute';
+spin2.style.left = '39%';
+spin2.style.top = '53%';
+spin2.style.width = '100px';
+spin2.style.height = '100px';
+
+spin2.style.backgroundColor = '#00f';
+
+spin2.style.backgroundImage = 'linear-gradient(yellow 50%,blue 50%)';
+
+
+
+
+
+spin2.style.transform = 'rotate(0deg)';
+spin2.style.transition = 'transform 1s linear';
+document.body.appendChild(spin2);
+
+function spinAround() {
+  spin2.style.transform = 'rotate(' + (parseInt(spin2.style.transform.match(/\d+/)) + 10) + 'deg)';
+}
+
+setInterval(spinAround, 12);
+
+document.body.style.backgroundColor = 'gray';
+
+var slider = document.createElement('input');
+slider.type = 'range';
+slider.min = '1';
+slider.max = '10000';
+slider.value = '50';
+slider.style.position = 'absolute';
+slider.style.left = '12%';
+slider.style.top = '53%';
+document.body.appendChild(slider);
+
+function spinAround() {
+  spin.style.transform = 'rotate(' + (parseInt(spin.style.transform.match(/\d+/)) + parseInt(slider.value)) + 'deg)';
+}
+
+setInterval(spinAround, 12);
+});
+        </script>
+    </head>
+
+</html>
