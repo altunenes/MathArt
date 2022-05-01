@@ -151,3 +151,7 @@ var draw = function() {
     points = [];
   }
   setTimeout(draw, 5);};
+
+var sliderNames = document.createElement('div');
+sliderNames.innerHTML = '<span style="color:white">Line Width:</span> <span style="color:white">Mean:</span> <span style="color:white">Standard Deviation:</span> <span style="color:white">Font Size:</span>';
+document.body.appendChild(sliderNames);
