@@ -20,3 +20,5 @@ for (var i = 0; i < 100; i++) {
   lines.push(line);
 }
 setInterval(moveLines, 10);
+document.body.style.overflow = 'hidden';
+
