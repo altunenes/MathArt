@@ -8,7 +8,7 @@
 
 
   var rectangles = [];
-  var speed2 = 2;
+  var speed2 = 1;
 
 
   function moveRectangles() {
@@ -105,7 +105,33 @@
     speed2 = slider2.value;
   };
   document.body.appendChild(slider2);
+
+var colorPicker = document.createElement('input');
+colorPicker.type = 'color';
+colorPicker.style.position = 'absolute';
+colorPicker.style.top = '1%';
+colorPicker.style.right = '35%';
+colorPicker.style.transform = 'translate(-50%, -50%)';
+document.body.appendChild(colorPicker);
+colorPicker.addEventListener('change', function() {
+  for (var i = 0; i < lines.length; i++) {
+    lines[i].style.backgroundColor = colorPicker.value;
+  }
+});
+var colorPicker2 = document.createElement('input');
+colorPicker2.type = 'color';
+colorPicker2.style.position = 'absolute';
+colorPicker2.style.top = '1%';
+colorPicker2.style.right = '25%';
+colorPicker2.style.transform = 'translate(-50%, -50%)';
+document.body.appendChild(colorPicker2);
+colorPicker2.addEventListener('change', function() {
+  for (var i = 0; i < rectangles.length; i++) {
+    rectangles[i].style.backgroundColor = colorPicker2.value;
+  }
+});
   });
+  
           </script>
       </head>
 
