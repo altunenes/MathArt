@@ -10,3 +10,14 @@ for (var i = 0; i < 100; i++) {
     document.body.appendChild(line);
   }
 }
+     /*/   for (var i = 0; i < window.innerWidth; i += 10) {
+  var line = document.createElement('div');
+  line.style.position = 'absolute';
+  line.style.left = i + 'px';
+  line.style.width = '1px';
+  line.style.height = '100%';
+  line.style.backgroundColor = '#000000';
+  line.style.transform = 'rotate(135deg)';
+  document.body.appendChild(line);
+}
+/*/
