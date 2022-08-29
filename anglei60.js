@@ -1,4 +1,4 @@
-for (var i = 0; i < 36; i++) {
+for (var i = 1; i < 37; i++) {
         var line = document.createElement('div');
         line.style.width = '6px';
         line.style.height = '340px';
@@ -13,37 +13,58 @@ for (var i = 0; i < 36; i++) {
    var angle = 0;
    var spin = function() {
      angle += 0.05;
-     for (var i = 0; i < 24; i++) {
+     for (var i = 1; i < 37; i++) {
        var line = document.body.children[i];
        line.style.transform = 'translate(' + (i * 10) + 'px, 0px) rotate(' + (angle + i * 60) + 'deg)';
      }
      requestAnimationFrame(spin);
    };
-document.body.style.backgroundColor = 'black';
+
 var i = 0;
 var interval = setInterval(function() {
   rect2.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
   i++;
+
 }, 10);
 var slider = document.createElement('input');
 slider.type = 'range';
 slider.min = 0;
-slider.max = 55555555555555;
+slider.max = 300;
 slider.value = 24;
 slider.style.position = 'absolute';
 slider.style.left = '10px';
 slider.style.top = '10px';
 slider.style.width = '200px';
 document.body.appendChild(slider);
+
+
+var slider2 = document.createElement('input');
+slider2.type = 'range';
+slider2.min = 0;
+slider2.max = 180;
+slider2.value = 60;
+slider2.style.position = 'absolute';
+slider2.style.left = '10px';
+slider2.style.top = '40px';
+slider2.style.width = '200px';
+document.body.appendChild(slider2);
+
+
 var speed = 0.7;
 slider.oninput = function() {
   speed = slider.value / 100;
 };
+
+
+var rog2 = 60;
+slider2.oninput = function() {
+  rog2= slider2.value;
+};
 var spin = function() {
   angle += speed;
-  for (var i = 0; i < 36; i++) {
+  for (var i = 0; i < 37; i++) {
     var line = document.body.children[i];
-    line.style.transform = 'translate(' + (i * 10) + 'px, 0px) rotate(' + (angle + i * 80) + 'deg)';
+    line.style.transform = 'translate(' + (i * 10) + 'px, 0px) rotate(' + (angle + i * rog2) + 'deg)';
     line.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')';
   }
   requestAnimationFrame(spin);
