@@ -55,7 +55,16 @@ slider.oninput = function() {
   speed = slider.value / 100;
 };
 
-
+var colorPicker = document.createElement('input');
+colorPicker.type = 'color';
+colorPicker.value = '#ff0000';
+colorPicker.style.position = 'absolute';
+colorPicker.style.left = '10px';
+colorPicker.style.top = '10px';
+document.body.appendChild(colorPicker);
+colorPicker.oninput = function() {
+  document.body.style.backgroundColor = colorPicker.value;
+};
 var rog2 = 60;
 slider2.oninput = function() {
   rog2= slider2.value;
