@@ -79,3 +79,10 @@ var spin = function() {
   requestAnimationFrame(spin);
 };
 requestAnimationFrame(spin);
+
+var i = 0;
+var interval = setInterval(function() {
+  document.body.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
+  i++;
+
+}, 500);
