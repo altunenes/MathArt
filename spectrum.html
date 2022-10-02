@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var canvas = document.createElement('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+document.body.appendChild(canvas);
+var ctx = canvas.getContext('2d');
+var imgData = ctx.createImageData(canvas.width, canvas.height);
+var data = imgData.data;
+var t = 88;
+var tStep = 0.01;
+var tMax = 55* Math.PI;
+var xMax = canvas.width;
+var yMax = canvas.height;
+var x, y, i, j, k, r, g, b, a;
+for (i = 0; i < xMax; i++) {
+  for (j = 0; j < yMax; j++) {
+    x = i / xMax;
+    y = j / yMax;
+    r = Math.sin(x * t) * 255;
+    g = Math.sin(y * t) * 255;
+    b = Math.sin(x * y * t) * 255;
+    a = 255;
+    k = (i + j * xMax) * 4
+    data[k] = r;
+    data[k + 1] = g;
+    data[k + 2] = b;
+    data[k + 3] = a;
+  }
+}
+ctx.putImageData(imgData, 0, 0);
+t += tStep;
+if (t > tMax) {
+  t = 0;
+}
+});
+        </script>
+    </head>
+
+</html>
