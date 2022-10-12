@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
       frequency += 10;
-      if (frequency > 500) {
+      if (frequency > 8080) {
         frequency = 10;
       }
       requestAnimationFrame(animate);
