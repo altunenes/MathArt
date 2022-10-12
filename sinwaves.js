@@ -32,5 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
       requestAnimationFrame(animate);
     };
     animate();
+    document.body.style.overflow = 'hidden';
+
 
 });
