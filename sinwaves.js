@@ -34,27 +34,25 @@ document.addEventListener("DOMContentLoaded", function() {
     animate();
     document.body.style.overflow = 'hidden';
 
-var frequency = 10;
-var frequencyText = document.createElement('div');
-frequencyText.style.position = 'absolute';
-frequencyText.style.top = '0';
-frequencyText.style.right = '0';
-frequencyText.style.color = 'red';
-document.body.appendChild(frequencyText);
-var updateFrequencyText = function() {
-  frequencyText.innerHTML = frequency;
-  requestAnimationFrame(updateFrequencyText);
-};
-updateFrequencyText();
-    
- var style = document.createElement('style');
-style.innerHTML = '* { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }';
-document.head.appendChild(style);
- var frequencyLabel = document.createElement('div');
-frequencyLabel.style.position = 'absolute';
-frequencyLabel.style.top = '0';
-frequencyLabel.style.right = '40';
-frequencyLabel.style.color = 'red';
-frequencyLabel.innerHTML = 'frequency:';
-document.body.appendChild(frequencyLabel);
+    var frequency = 10;
+    var frequencyText = document.createElement('div');
+    frequencyText.style.position = 'absolute';
+    frequencyText.style.top = '0';
+    frequencyText.style.right = '0';
+    frequencyText.style.color = '#0f0';
+    document.body.appendChild(frequencyText);
+    var updateFrequencyText = function() {
+      frequencyText.innerHTML = frequency;
+      requestAnimationFrame(updateFrequencyText);
+    };
+    updateFrequencyText();
+    var frequencyLabel = document.createElement('div');
+  frequencyLabel.style.position = 'absolute';
+  frequencyLabel.style.top = '0';
+  frequencyLabel.style.right = '50';
+  frequencyLabel.style.color = 'red';
+  frequencyLabel.innerHTML = 'frequency:';
+  document.body.appendChild(frequencyLabel);
+
+  style.innerHTML = '* { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; font-size: 20px; }';
 });
