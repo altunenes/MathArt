@@ -34,5 +34,20 @@ document.addEventListener("DOMContentLoaded", function() {
     animate();
     document.body.style.overflow = 'hidden';
 
-
+var frequency = 10;
+var frequencyText = document.createElement('div');
+frequencyText.style.position = 'absolute';
+frequencyText.style.top = '0';
+frequencyText.style.right = '0';
+frequencyText.style.color = 'red';
+document.body.appendChild(frequencyText);
+var updateFrequencyText = function() {
+  frequencyText.innerHTML = frequency;
+  requestAnimationFrame(updateFrequencyText);
+};
+updateFrequencyText();
+    
+ var style = document.createElement('style');
+style.innerHTML = '* { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }';
+document.head.appendChild(style);
 });
