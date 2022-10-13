@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var centerX = window.innerWidth / 2;
     var centerY = window.innerHeight / 2;
     var radius = Math.min(centerX, centerY);
-    var numCircles = 55;
+    var numCircles = 77;
     var numPoints = 55;
     var circleRadius = radius / numCircles;
     var circlePoints = [];
@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
       circlePoints[i] = [];
       for (var j = 0; j < numPoints; j++) {
         circlePoints[i][j] = {
-          x: centerX + Math.sin(4 * Math.PI * j / numPoints) * circleRadius * (i + 1),
-          y: centerY + Math.cos(2 * Math.PI * j / numPoints) * circleRadius * (i + 1)
+          x: centerX + Math.sin(4 * Math.PI * j / numPoints) * circleRadius * (i + 5),
+          y: centerY + Math.cos(4 * Math.PI * j / numPoints) * circleRadius * (i + 5)
         };
       }
     }
