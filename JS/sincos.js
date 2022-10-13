@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var centerY = window.innerHeight / 2;
     var radius = Math.min(centerX, centerY);
     var numCircles = 55;
-    var numPoints = 3;
+    var numPoints = 55;
     var circleRadius = radius / numCircles;
     var circlePoints = [];
     for (var i = 0; i < numCircles; i++) {
