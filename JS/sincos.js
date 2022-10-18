@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
     github.style.color = '#fff';
     document.body.appendChild(github);
     var twitter = document.createElement('a');
-    twitter.href = 'https://twitter.com/altunenes';
+    twitter.href = 'https://twitter.com/emportent';
     twitter.innerHTML = 'Twitter';
     twitter.style.position = 'fixed';
     twitter.style.bottom = '0';
