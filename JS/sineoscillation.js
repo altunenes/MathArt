@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
   fontAwesome.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css';
   document.head.appendChild(fontAwesome);
   
-  /* Under construction of the next part about a new illusion that uses background motion
+  /* Under the construction. the next part is about a new illusion that uses background motion.
     var rightArrow = document.createElement('div');
     rightArrow.innerHTML = '→';
     rightArrow.style.fontSize = '100px';
